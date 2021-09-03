@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-<h1> Table of Research </h1>
+<h1> Research Table </h1>
 <br>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -23,7 +23,7 @@
           <a class="nav-link" href="books.html">Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Something</a>
+          <a class="nav-link" href="interests.html">Interests</a>
         </li>
       </ul>
     </div>
@@ -83,6 +83,7 @@
     </tbody>
   </table>
 
+    <h3> Add a New Book </h3>
   <form>
     <div class="form-group">
       <label for="InputTitle1">Title</label>
@@ -100,11 +101,15 @@
         <label for="inputPublisher1">Publisher</label>
         <input type="publisher" class="form-control" id="InputPublisher1" placeholder="Publisher">
       </div>
-      
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
+    <div class="form-group">
+        <label for="inputPageCount1">Page Count</label>
+        <input type="pagecount" class="form-control" id="InputPageCount1" placeholder="Page Count">
+      </div>
+      <div class="form-group">
+        <label for="inputMSRP1">MSRP</label>
+        <input type="msrp" class="form-control" id="InputMSRP1" placeholder="MSRP">
+      </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
