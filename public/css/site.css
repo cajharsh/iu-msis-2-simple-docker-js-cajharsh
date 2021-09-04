@@ -4,18 +4,31 @@ body {
 }
 
 h1 {
-    color: #4a7c59
+    color: #4a7c59;
+    font-weight: bolder
 }
 
 
 h2 {
-    color: #8fc0a9
+    color: #8fc0a9;
+    font-weight:bold;
+    font-size:large 
 }
 
 a:link {
-    color: #68b0ab
+    color: #faf3dd
 }
 
 a:visited {
     color: #8fc0a9
+}
+
+.col-9 {
+    color: #68b0ab;
+    font-weight: bold ;
+    font-size: medium;
+}
+
+p {
+   font-size:medium 
 }
