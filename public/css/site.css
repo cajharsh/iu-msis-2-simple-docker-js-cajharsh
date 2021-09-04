@@ -11,3 +11,11 @@ h1 {
 h2 {
     color: #8fc0a9
 }
+
+a:link {
+    color: #68b0ab
+}
+
+a:visited {
+    color: #8fc0a9
+}
