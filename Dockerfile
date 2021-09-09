@@ -2,8 +2,6 @@ FROM php:7.4-apache
 
 LABEL maintainer="Caitlin Harshberger"
 
-#Set the working directory in the image 
-WORKDIR /var/www/html
+COPY app /srv/app
 
-#Copy my public folder to the working directory
-COPY public .
+COPY docker/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
