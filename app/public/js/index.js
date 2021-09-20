@@ -14,11 +14,11 @@ const Profile = {
             this.person = parsedJson.results[0]
             console.log("C");
         })
-        .catch( err => {
-            console.error(err)
+            .catch( err => {
+                console.error(err)
         })
 
-        console.log("B");
+            console.log("B");
 
     }
 }
