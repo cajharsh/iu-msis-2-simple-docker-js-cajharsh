@@ -1,4 +1,4 @@
-const Offer = {
+const Profile = {
     data() {
         return {
             "person": {},
@@ -22,4 +22,4 @@ const Offer = {
 
     }
 }
-Vue.createApp(Offer).mount('#offerApp');
+Vue.createApp(Profile).mount('#profileApp');
