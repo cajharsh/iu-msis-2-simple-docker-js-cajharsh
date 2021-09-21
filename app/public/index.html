@@ -34,18 +34,20 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-9"> <h3> Hello! </h3> </div>
-      <div id="profileApp" class="col-4"><br>
+      <div class="col-9"> <h3> Hello! </h3> </div> <br>
+      <div id="profileApp" class="col-10"><br>
         <h4> {{person.name.first}} {{person.name.last}} </h4>
+        <img v-bind:src="person.picture.large">
         <p> Country of Origin: {{person.location.country}} </p>
         <p> Birthdate: {{prettyBirthday}}</p>
         <p> Age: {{person.dob.age}}</p>
         <h4> Stay in Touch! </h4> <a v-bind:href="'mailto:'+person.email"> {{person.email}} </a> 
-        <img id="profilepic" v-bind:src="person.picture.large"> </div>
+       </div>
     </div>
   </div>
 
   <br>
+  <p id="thanks"> Thanks for visiting! </p>
 
 
   <div class="container">

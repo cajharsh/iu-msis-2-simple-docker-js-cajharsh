@@ -81,10 +81,7 @@ h3{
     font-size: x-small;
 }
 
-
-#profilepic {
-        display:block;
-        margin-right: 300px;
-        margin-top: 70px;
-
+#thanks {
+	color:#114b4e;
+	font-size: medium;
 }
