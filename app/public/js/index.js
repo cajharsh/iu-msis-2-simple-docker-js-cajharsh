@@ -4,8 +4,12 @@ const Profile = {
             "person": {},
         }
     },
-
-
+    computed: {
+        prettyBirthday() {
+            return dayjs(this.person.dob.date)
+            .format('DD MMM YYYY')
+        }
+    },
     created() {
         console.log("A");
 
