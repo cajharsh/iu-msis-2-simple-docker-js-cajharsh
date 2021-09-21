@@ -26,7 +26,7 @@ const Profile = {
                     console.error(err)
             })
     
-                console.log("B");
+            console.log("B");
         }
     },
     created() {
