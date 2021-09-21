@@ -40,8 +40,8 @@
         <p> Country of Origin: {{person.location.country}} </p>
         <p> Birthdate: {{prettyBirthday}}</p>
         <p> Age: {{person.dob.age}}</p>
-        <h4> Stay in Touch! </h4> <a v-bind:href="'mailto:'+person.email"> {{person.email}} </a> </div>
-      <div id = "profileApp" class="col-8"><br> <img v-bind:src="person.picture.large"> </div> 
+        <h4> Stay in Touch! </h4> <a v-bind:href="'mailto:'+person.email"> {{person.email}} </a> 
+      <div id="profileApp" class="col-8"><br> <img v-bind:src="person.picture.large"> </div> </div>
     </div>
   </div>
 
