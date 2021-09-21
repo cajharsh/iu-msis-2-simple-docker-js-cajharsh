@@ -41,7 +41,7 @@
         <p> Birthdate: {{prettyBirthday}}</p>
         <p> Age: {{person.dob.age}}</p>
         <h4> Stay in Touch! </h4> <a v-bind:href="'mailto:'+person.email"> {{person.email}} </a> 
-      <div class="col-4"><br> <img v-bind:src="person.picture.large"> </div> </div>
+        <img class="col-8" v-bind:src="person.picture.large"> </div>
     </div>
   </div>
 
