@@ -41,10 +41,16 @@
         <p> Birthdate: {{prettyBirthday}}</p>
         <p> Age: {{person.dob.age}}</p>
         <h4> Stay in Touch! </h4> <a v-bind:href="'mailto:'+person.email"> {{person.email}} </a> 
+        <br>
+        <br>
+        <br>
+        <form v-on:submit.prevent="fetchUserData">
+          <button type="submit"> Refresh </button>
+        </form>
        </div>
     </div>
   </div>
-
+ 
   <br>
 
 
