@@ -34,6 +34,7 @@
 <br>
 <table id="bookTable" class="table">
     <thead>
+    
       <tr>
         <th>#</th>
         <th>Title</th>
@@ -45,7 +46,10 @@
       </tr>
     </thead>
     <tbody>
+      <div class="student">
       <tr>
+        <td class="id"></td> </td>
+      <!-- <tr>
         <th scope="row">1</th>
         <td> <i>Guns, Germs, and Steel: The Fate of Human Societies </i></td>
         <td>Jared Diamond</td>
@@ -80,7 +84,7 @@
         <td>Yale University Press</td>
         <td>1028</td>
         <td>$25</td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
 
@@ -89,31 +93,32 @@
   <br>
 
     <h3> Add a New Book </h3>
-  <form>
+
+  <form v-on:submit.prevent="postNewOffer">
     <div class="form-group">
-      <label for="InputTitle1">Title</label>
-      <input type="title" class="form-control" id="InputTitle1" aria-describedby="titleHelp" placeholder="Enter title">
+      <label for="title">Title</label>
+      <input type="text" v-model="bookForm.title" class="form-control" id="title" aria-describedby="titleHelp" placeholder="Enter Title">
     </div>
     <div class="form-group">
-      <label for="inputAuthor1">Author</label>
-      <input type="author" class="form-control" id="InputAuthor1" placeholder="Author">
+      <label for="author">Author</label>
+      <input type="text" v-model="bookForm.author" class="form-control" id="author" placeholder="Enter Author">
     </div>
     <!--Date Picker Code found on W3Schools https://www.w3schools.com/tags/att_input_type_date.asp-->
     <div class="form-group">
-        <label for="inputYearPublished1">Year Published</label>
-        <input type="date" id="InputYearPublished1" name="YearPublished">
+        <label for="yearpublished">Year Published</label>
+        <input type="date" v-model="bookForm.yearpublished" id="yearpublished" name="YearPublished">
       </div>
     <div class="form-group">
-        <label for="inputPublisher1">Publisher</label>
-        <input type="publisher" class="form-control" id="InputPublisher1" placeholder="Publisher">
+        <label for="publisher">Publisher</label>
+        <input type="text"v-model="bookForm.publisher"  class="form-control" id="publisher" placeholder="Enter Publisher">
       </div>
     <div class="form-group">
-        <label for="inputPageCount1">Page Count</label>
-        <input type="pagecount" class="form-control" id="InputPageCount1" placeholder="Page Count">
+        <label for="pagecount">Page Count</label>
+        <input type="number" v-model="bookForm.pagecount" class="form-control" id="pagecount" placeholder="Enter Page Count">
       </div>
       <div class="form-group">
-        <label for="inputMSRP1">MSRP</label>
-        <input type="msrp" class="form-control" id="InputMSRP1" placeholder="MSRP">
+        <label for="MSRP">MSRP</label>
+        <input type="text" v-model="bookForm.MSRP" class="form-control" id="MSRP" placeholder="Enter MSRP">
       </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
