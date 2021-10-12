@@ -32,9 +32,32 @@
 <br>
 <hr>
 <br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Year Published</th>
+      <th>Publisher</th>
+      <th>Page Count</th>
+      <th>MSRP</th> 
+    </tr>
+  </thead>
+    <tbody>
+        <tr v-for="book in books">
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.yearpublished }}</td>
+            <td>{{ book.publisher }}</td>
+            <td>{{ book.pagecount }}</td>
+            <td>{{ book.msrp }}</td>
+        </tr>
+    </tbody>
+</table>
+
 <table id="bookTable" class="table">
     <thead>
-    
       <tr>
         <th>#</th>
         <th>Title</th>
@@ -46,10 +69,9 @@
       </tr>
     </thead>
     <tbody>
-      <div class="student">
       <tr>
-        <td class="id"></td> </td>
-      <!-- <tr>
+        <th scope="row"> 1 </th>
+      </tr>
         <th scope="row">1</th>
         <td> <i>Guns, Germs, and Steel: The Fate of Human Societies </i></td>
         <td>Jared Diamond</td>
