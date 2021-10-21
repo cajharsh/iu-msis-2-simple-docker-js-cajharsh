@@ -1,27 +1,40 @@
-const BookApp = {
+const SomeApp = {
     data() {
       return {
-        books: [],
+        person: {}
       }
     },
-    computed: {},
+    computed: {
+        prettyBirthday() {
+            return dayjs(this.person.dob.date)
+            .format('D MMM YYYY')
+        }
+    },
     methods: {
-        fetchBookData() {
-            fetch('/api/book')
-            .then( response => response.json())
-            .then((json) => {
-                this.books = json;
+        fetchUserData() {
+
+            fetch('https://randomuser.me/api/')
+
+            .then(response => response.json())
+
+            .then( (json) => {
+
+                this.person = json.results[0];
+
             })
+
             .catch( (error) => {
+
                 console.error(error);
+
             });
-        
+
         }
     },
     created() {
-        this.fetchBookData();
+        this.fetchUserData();
     }
   
-}
-    
-Vue.createApp(BookApp).mount('#bookApp')
+  }
+  
+  Vue.createApp(SomeApp).mount('#userApp');
