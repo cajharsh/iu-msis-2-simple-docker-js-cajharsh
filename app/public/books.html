@@ -58,7 +58,7 @@
               <td>{{ book.msrp }}</td>
               <td></td>
               <td>
-                <button type="button" v-on:click="handleEditBook(book)" class="btn btn-outline-secondary btn-sm"> Edit </button>
+                <button type="button" v-on:click="handleEditBook(book)" class="btn btn-outline-secondary btn-sm" v-on:click="handleEditBook(book)"> Edit </button>
                 <button type="button" class="btn btn-outline-secondary btn-sm"> Delete </button>
               </td>
         </tr>
@@ -67,10 +67,10 @@
 
 
 
-<!--Add the if from the button here to change label-->
-  <h3> Add a New Book </h3>
 
-  <form v-on:submit.prevent="postNewBook"> <!-- change name of this -->
+  <h3>{{ selectedBook === null ? "Add " : "Edit " }} Book </h3>
+
+  <form v-on:submit.prevent="postBook"> 
     <div class="form-group">
       <label for="title">Title</label>
       <input type="text" v-model="bookForm.title" class="form-control" id="title" placeholder="Enter Title">
@@ -96,9 +96,8 @@
         <label for="msrp">MSRP</label>
         <input type="text" v-model="bookForm.msrp" class="form-control" id="msrp" placeholder="Enter MSRP">
       </div>
-      <!--button here, updated submit button- changes to edit when needed-->
-      <!---Add a cancel button-->
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary"> {{ selectedBook === null ? "Add " : "Edit " }} Book</button>
+    <button type="button" class="btn btn-outline-secondary" v-if="selectedBook" v-on:click="handleResetEdit"> Cancel Edit </button>
   </form>
 </div>
 

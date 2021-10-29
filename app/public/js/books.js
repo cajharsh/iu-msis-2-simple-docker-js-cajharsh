@@ -19,6 +19,21 @@ const SomeApp = {
                 console.error(err);
             })
         },
+        selectBook(s) {
+            if (b == this.selectedBook) {
+                return;
+            }
+            this.selectedBook = b;
+            this.books = [];
+            this.fetchBooksData(this.selectedBook);
+        },
+        postOffer(evt) {
+            if (this.selectedBook === null) {
+                this.postNewBook(evt);
+            } else {
+                this.postEditBook(evt);
+            }
+        },
         postNewBook(evt) {
             //this.bookForm.bookId = this.selectedBook.id;
             console.log("Posting:", this.bookForm);
@@ -38,8 +53,16 @@ const SomeApp = {
                this.books = json;
 
                //reset the form
-               this.bookForm = {};
+               this.resetBookForm = {};
            }); 
+        },
+        handleEditBook(book) {
+            this.selectedBook = book;
+            this.bookForm = Object.assign({}, this.selectedBook);
+        },
+        handleResetEdit() {
+            this.selectedBook = null;
+            this.bookForm = {};
         }
     },
     created() {
